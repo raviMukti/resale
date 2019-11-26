@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Declare the widget
     Button buttonGet;
     Animation uptodown, downtoup;
     TextView textView;
@@ -20,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //set the variable to a widget by id
         buttonGet = (Button)findViewById(R.id.buttonGetStarted);
         textView = (TextView)findViewById(R.id.textView);
         imageView = (ImageView)findViewById(R.id.imageView);
         uptodown = AnimationUtils.loadAnimation(this, R.anim.uptodown);
         downtoup = AnimationUtils.loadAnimation(this, R.anim.downtoup);
+        //set the animation props to a variable widget
         textView.setAnimation(uptodown);
         imageView.setAnimation(uptodown);
         buttonGet.setAnimation(downtoup);
